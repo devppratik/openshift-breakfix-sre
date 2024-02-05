@@ -1,0 +1,336 @@
+apiVersion: hypershift.openshift.io/v1beta1
+kind: HostedCluster
+metadata:
+  annotations:
+    cluster.open-cluster-management.io/hypershiftdeployment: ignore/ignore
+    cluster.open-cluster-management.io/managedcluster-name: 27cqh1uv3ohqjr0ajltrmlgo7r7d1092
+    hypershift.openshift.io/cleanup-cloud-resources: "true"
+    hypershift.openshift.io/cluster-scheduled: "true"
+    hypershift.openshift.io/skip-release-image-validation: "true"
+    hypershift.openshift.io/topology: dedicated-request-serving-components
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"hypershift.openshift.io/v1beta1","kind":"HostedCluster","metadata":{"annotations":{"cluster.open-cluster-management.io/hypershiftdeployment":"ignore/ignore","cluster.open-cluster-management.io/managedcluster-name":"27cqh1uv3ohqjr0ajltrmlgo7r7d1092","hypershift.openshift.io/cleanup-cloud-resources":"true","hypershift.openshift.io/cluster-scheduled":"true","hypershift.openshift.io/skip-release-image-validation":"true","hypershift.openshift.io/topology":"dedicated-request-serving-components"},"creationTimestamp":"2023-11-08T21:02:09Z","finalizers":["hypershift.openshift.io/finalizer"],"generation":2,"labels":{"api.openshift.com/environment":"staging","api.openshift.com/id":"27cqh1uv3ohqjr0ajltrmlgo7r7d1092","api.openshift.com/legal-entity-id":"1MKVU4otCIuogoLtgtyU6wajxjW","api.openshift.com/name":"phwu-stage-m1","red-hat-clustertype":"rosa","red-hat-managed":"true"},"name":"phwu-stage-m1","namespace":"ocm-staging-27cqh1uv3ohqjr0ajltrmlgo7r7d1092","resourceVersion":"27180406","uid":"bf35d746-84cf-4ec3-ac5a-b93dd985cdd1"},"spec":{"auditWebhook":{"name":"phwu-stage-m1-audit-webhook-kubeconfig"},"autoscaling":{},"channel":"candidate-4.14","clusterID":"fbb5b296-b59f-471c-9ef9-4708a0f6759a","configuration":{"apiServer":{"audit":{"profile":"Default"},"clientCA":{"name":""},"encryption":{},"servingCerts":{"namedCertificates":[{"servingCertificate":{"name":"cluster-api-cert"}}]}},"ingress":{"domain":"","loadBalancer":{"platform":{"aws":{"type":"NLB"},"type":""}}},"proxy":{"trustedCA":{"name":""}}},"controllerAvailabilityPolicy":"HighlyAvailable","dns":{"baseDomain":"rosa.phwu-stage-m1.hsbx.s3.devshift.org","baseDomainPrefix":"","privateZoneID":"Z0005097HL81YPZEHZNU","publicZoneID":"Z00651472HQ28R0TBC3CA"},"etcd":{"managed":{"storage":{"persistentVolume":{"size":"32G"},"restoreSnapshotURL":["https://cl0caul7lnb697cv7e4g-oadp-operator.s3.us-west-2.amazonaws.com/phwu-stage-m1-etcd-0-snapshot.db?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIA6PJZI5NZXUUIRHBA%2F20231108%2Fus-west-2%2Fs3%2Faws4_request\u0026X-Amz-Date=20231108T214304Z\u0026X-Amz-Expires=3600\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=22098081f7e37c3e71b6e2bab0128cceaf7f50368fabcf81b8d5ba8fc2146bce","https://cl0caul7lnb697cv7e4g-oadp-operator.s3.us-west-2.amazonaws.com/phwu-stage-m1-etcd-0-snapshot.db?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIA6PJZI5NZXUUIRHBA%2F20231108%2Fus-west-2%2Fs3%2Faws4_request\u0026X-Amz-Date=20231108T214304Z\u0026X-Amz-Expires=3600\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=22098081f7e37c3e71b6e2bab0128cceaf7f50368fabcf81b8d5ba8fc2146bce","https://cl0caul7lnb697cv7e4g-oadp-operator.s3.us-west-2.amazonaws.com/phwu-stage-m1-etcd-0-snapshot.db?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIA6PJZI5NZXUUIRHBA%2F20231108%2Fus-west-2%2Fs3%2Faws4_request\u0026X-Amz-Date=20231108T214305Z\u0026X-Amz-Expires=3600\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=abd76a76e035566a70ad945da4036c159ac52991df4f57874df3602d05b0d607"],"type":"PersistentVolume"}},"managementType":"Managed"},"fips":false,"infraID":"27cqh1uv3ohqjr0ajltrmlgo7r7d1092","infrastructureAvailabilityPolicy":"HighlyAvailable","issuerURL":"https://lponce-oidc-r6n8.s3.us-east-1.amazonaws.com","networking":{"clusterNetwork":[{"cidr":"10.128.0.0/14","hostPrefix":23}],"machineNetwork":[{"cidr":"10.0.0.0/16"}],"networkType":"OVNKubernetes","serviceNetwork":[{"cidr":"172.30.0.0/16"}]},"olmCatalogPlacement":"management","platform":{"aws":{"additionalAllowedPrincipals":["arn:aws:iam::644306948063:root"],"cloudProviderConfig":{"subnet":{"id":"subnet-0e3a4046c1c2f1078"},"vpc":"vpc-06637416807cd3f3e","zone":"us-west-2a"},"endpointAccess":"PublicAndPrivate","region":"us-west-2","resourceTags":[{"key":"api.openshift.com/environment","value":"staging"},{"key":"api.openshift.com/id","value":"27cqh1uv3ohqjr0ajltrmlgo7r7d1092"},{"key":"api.openshift.com/legal-entity-id","value":"1MKVU4otCIuogoLtgtyU6wajxjW"},{"key":"api.openshift.com/name","value":"phwu-stage-m1"},{"key":"red-hat-clustertype","value":"rosa"},{"key":"red-hat-managed","value":"true"},{"key":"kubernetes.io/cluster/27cqh1uv3ohqjr0ajltrmlgo7r7d1092","value":"owned"}],"rolesRef":{"controlPlaneOperatorARN":"arn:aws:iam::765374464689:role/phwu-stage-m1-b3c4-kube-system-control-plane-operator","imageRegistryARN":"arn:aws:iam::765374464689:role/phwu-stage-m1-b3c4-openshift-image-registry-installer-cloud-cred","ingressARN":"arn:aws:iam::765374464689:role/phwu-stage-m1-b3c4-openshift-ingress-operator-cloud-credentials","kubeCloudControllerARN":"arn:aws:iam::765374464689:role/phwu-stage-m1-b3c4-kube-system-kube-controller-manager","networkARN":"arn:aws:iam::765374464689:role/phwu-stage-m1-b3c4-openshift-cloud-network-config-controller-clo","nodePoolManagementARN":"arn:aws:iam::765374464689:role/phwu-stage-m1-b3c4-kube-system-capa-controller-manager","storageARN":"arn:aws:iam::765374464689:role/phwu-stage-m1-b3c4-openshift-cluster-csi-drivers-ebs-cloud-crede"}},"type":"AWS"},"pullSecret":{"name":"phwu-stage-m1-pull"},"release":{"image":"quay.io/openshift-release-dev/ocp-release@sha256:05ba8e63f8a76e568afe87f182334504a01d47342b6ad5b4c3ff83a2463018bd"},"secretEncryption":{"aescbc":{"activeKey":{"name":"phwu-stage-m1-encryption"}},"type":"aescbc"},"serviceAccountSigningKey":{"name":"bound-service-account-signing-key"},"services":[{"service":"OVNSbDb","servicePublishingStrategy":{"type":"Route"}},{"service":"APIServer","servicePublishingStrategy":{"route":{"hostname":"api.phwu-stage-m1.hsbx.s3.devshift.org"},"type":"Route"}},{"service":"OAuthServer","servicePublishingStrategy":{"route":{"hostname":"oauth.phwu-stage-m1.hsbx.s3.devshift.org"},"type":"Route"}},{"service":"OIDC","servicePublishingStrategy":{"type":"S3"}},{"service":"Konnectivity","servicePublishingStrategy":{"type":"Route"}},{"service":"Ignition","servicePublishingStrategy":{"type":"Route"}}],"sshKey":{"name":"phwu-stage-m1-ssh"}}}
+  creationTimestamp: "2023-11-08T21:43:06Z"
+  deletionGracePeriodSeconds: 0
+  deletionTimestamp: "2023-11-08T22:17:44Z"
+  finalizers:
+  - hypershift.openshift.io/finalizer
+  generation: 2
+  labels:
+    api.openshift.com/environment: staging
+    api.openshift.com/id: 27cqh1uv3ohqjr0ajltrmlgo7r7d1092
+    api.openshift.com/legal-entity-id: 1MKVU4otCIuogoLtgtyU6wajxjW
+    api.openshift.com/name: phwu-stage-m1
+    hypershift.openshift.io/silence-cluster-alerts: clusterDeleting
+    red-hat-clustertype: rosa
+    red-hat-managed: "true"
+  name: phwu-stage-m1
+  namespace: ocm-staging-27cqh1uv3ohqjr0ajltrmlgo7r7d1092
+  ownerReferences:
+  - apiVersion: work.open-cluster-management.io/v1
+    kind: AppliedManifestWork
+    name: df427d72b6bba3800a3e9ddaed7257cead699b733058de4f5653ccbe6229174f-27cqh1uv3ohqjr0ajltrmlgo7r7d1092
+    uid: 12983f46-1fbf-4b8f-ad2a-67efa8e8b8f8
+  resourceVersion: "12310742"
+  uid: 704db223-ed1e-4f7c-b8d7-9137f10352f3
+spec:
+  auditWebhook:
+    name: phwu-stage-m1-audit-webhook-kubeconfig
+  autoscaling: {}
+  channel: candidate-4.14
+  clusterID: fbb5b296-b59f-471c-9ef9-4708a0f6759a
+  configuration:
+    apiServer:
+      audit:
+        profile: Default
+      clientCA:
+        name: ""
+      encryption: {}
+      servingCerts:
+        namedCertificates:
+        - servingCertificate:
+            name: cluster-api-cert
+    ingress:
+      domain: ""
+      loadBalancer:
+        platform:
+          aws:
+            type: NLB
+          type: ""
+    proxy:
+      trustedCA:
+        name: ""
+  controllerAvailabilityPolicy: HighlyAvailable
+  dns:
+    baseDomain: rosa.phwu-stage-m1.hsbx.s3.devshift.org
+    baseDomainPrefix: ""
+    privateZoneID: Z0005097HL81YPZEHZNU
+    publicZoneID: Z00651472HQ28R0TBC3CA
+  etcd:
+    managed:
+      storage:
+        persistentVolume:
+          size: 32G
+        restoreSnapshotURL:
+        - https://cl0caul7lnb697cv7e4g-oadp-operator.s3.us-west-2.amazonaws.com/phwu-stage-m1-etcd-0-snapshot.db?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6PJZI5NZXUUIRHBA%2F20231108%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231108T214304Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=22098081f7e37c3e71b6e2bab0128cceaf7f50368fabcf81b8d5ba8fc2146bce
+        - https://cl0caul7lnb697cv7e4g-oadp-operator.s3.us-west-2.amazonaws.com/phwu-stage-m1-etcd-0-snapshot.db?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6PJZI5NZXUUIRHBA%2F20231108%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231108T214304Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=22098081f7e37c3e71b6e2bab0128cceaf7f50368fabcf81b8d5ba8fc2146bce
+        - https://cl0caul7lnb697cv7e4g-oadp-operator.s3.us-west-2.amazonaws.com/phwu-stage-m1-etcd-0-snapshot.db?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6PJZI5NZXUUIRHBA%2F20231108%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231108T214305Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=abd76a76e035566a70ad945da4036c159ac52991df4f57874df3602d05b0d607
+        type: PersistentVolume
+    managementType: Managed
+  fips: false
+  infraID: 27cqh1uv3ohqjr0ajltrmlgo7r7d1092
+  infrastructureAvailabilityPolicy: HighlyAvailable
+  issuerURL: https://lponce-oidc-r6n8.s3.us-east-1.amazonaws.com
+  networking:
+    clusterNetwork:
+    - cidr: 10.128.0.0/14
+      hostPrefix: 23
+    machineNetwork:
+    - cidr: 10.0.0.0/16
+    networkType: OVNKubernetes
+    serviceNetwork:
+    - cidr: 172.30.0.0/16
+  olmCatalogPlacement: management
+  platform:
+    aws:
+      additionalAllowedPrincipals:
+      - arn:aws:iam::644306948063:root
+      cloudProviderConfig:
+        subnet:
+          id: subnet-0e3a4046c1c2f1078
+        vpc: vpc-06637416807cd3f3e
+        zone: us-west-2a
+      endpointAccess: PublicAndPrivate
+      region: us-west-2
+      resourceTags:
+      - key: api.openshift.com/environment
+        value: staging
+      - key: api.openshift.com/id
+        value: 27cqh1uv3ohqjr0ajltrmlgo7r7d1092
+      - key: api.openshift.com/legal-entity-id
+        value: 1MKVU4otCIuogoLtgtyU6wajxjW
+      - key: api.openshift.com/name
+        value: phwu-stage-m1
+      - key: red-hat-clustertype
+        value: rosa
+      - key: red-hat-managed
+        value: "true"
+      - key: kubernetes.io/cluster/27cqh1uv3ohqjr0ajltrmlgo7r7d1092
+        value: owned
+      rolesRef:
+        controlPlaneOperatorARN: arn:aws:iam::765374464689:role/phwu-stage-m1-b3c4-kube-system-control-plane-operator
+        imageRegistryARN: arn:aws:iam::765374464689:role/phwu-stage-m1-b3c4-openshift-image-registry-installer-cloud-cred
+        ingressARN: arn:aws:iam::765374464689:role/phwu-stage-m1-b3c4-openshift-ingress-operator-cloud-credentials
+        kubeCloudControllerARN: arn:aws:iam::765374464689:role/phwu-stage-m1-b3c4-kube-system-kube-controller-manager
+        networkARN: arn:aws:iam::765374464689:role/phwu-stage-m1-b3c4-openshift-cloud-network-config-controller-clo
+        nodePoolManagementARN: arn:aws:iam::765374464689:role/phwu-stage-m1-b3c4-kube-system-capa-controller-manager
+        storageARN: arn:aws:iam::765374464689:role/phwu-stage-m1-b3c4-openshift-cluster-csi-drivers-ebs-cloud-crede
+    type: AWS
+  pullSecret:
+    name: phwu-stage-m1-pull
+  release:
+    image: quay.io/openshift-release-dev/ocp-release@sha256:05ba8e63f8a76e568afe87f182334504a01d47342b6ad5b4c3ff83a2463018bd
+  secretEncryption:
+    aescbc:
+      activeKey:
+        name: phwu-stage-m1-encryption
+    type: aescbc
+  serviceAccountSigningKey:
+    name: bound-service-account-signing-key
+  services:
+  - service: OVNSbDb
+    servicePublishingStrategy:
+      type: Route
+  - service: APIServer
+    servicePublishingStrategy:
+      route:
+        hostname: api.phwu-stage-m1.hsbx.s3.devshift.org
+      type: Route
+  - service: OAuthServer
+    servicePublishingStrategy:
+      route:
+        hostname: oauth.phwu-stage-m1.hsbx.s3.devshift.org
+      type: Route
+  - service: OIDC
+    servicePublishingStrategy:
+      type: S3
+  - service: Konnectivity
+    servicePublishingStrategy:
+      type: Route
+  - service: Ignition
+    servicePublishingStrategy:
+      type: Route
+  sshKey:
+    name: phwu-stage-m1-ssh
+status:
+  conditions:
+  - lastTransitionTime: "2023-11-08T21:43:19Z"
+    message: WebIdentityErr
+    observedGeneration: 1
+    reason: InvalidIdentityProvider
+    status: "False"
+    type: ValidAWSIdentityProvider
+  - lastTransitionTime: "2023-11-08T21:43:06Z"
+    message: Condition not found in the CVO.
+    observedGeneration: 1
+    reason: StatusUnknown
+    status: Unknown
+    type: ClusterVersionProgressing
+  - lastTransitionTime: "2023-11-08T21:43:06Z"
+    message: Condition not found in the CVO.
+    observedGeneration: 1
+    reason: StatusUnknown
+    status: Unknown
+    type: ClusterVersionReleaseAccepted
+  - lastTransitionTime: "2023-11-08T21:43:06Z"
+    message: Condition not found in the CVO.
+    observedGeneration: 1
+    reason: StatusUnknown
+    status: Unknown
+    type: ClusterVersionUpgradeable
+  - lastTransitionTime: "2023-11-08T21:43:06Z"
+    message: Condition not found in the CVO.
+    observedGeneration: 1
+    reason: StatusUnknown
+    status: Unknown
+    type: ClusterVersionAvailable
+  - lastTransitionTime: "2023-11-08T21:43:06Z"
+    message: Condition not found in the CVO.
+    observedGeneration: 1
+    reason: StatusUnknown
+    status: Unknown
+    type: ClusterVersionSucceeding
+  - lastTransitionTime: "2023-11-08T21:43:19Z"
+    message: capi-provider deployment has 1 unavailable replicas
+    observedGeneration: 1
+    reason: UnavailableReplicas
+    status: "True"
+    type: Degraded
+  - lastTransitionTime: "2023-11-08T21:43:19Z"
+    message: Waiting for etcd to reach quorum
+    observedGeneration: 1
+    reason: EtcdWaitingForQuorum
+    status: "False"
+    type: EtcdAvailable
+  - lastTransitionTime: "2023-11-08T21:43:19Z"
+    message: Kube APIServer deployment not found
+    observedGeneration: 1
+    reason: NotFound
+    status: "False"
+    type: KubeAPIServerAvailable
+  - lastTransitionTime: "2023-11-08T21:43:29Z"
+    message: All is well
+    observedGeneration: 1
+    reason: AsExpected
+    status: "True"
+    type: InfrastructureReady
+  - lastTransitionTime: "2023-11-08T21:43:19Z"
+    message: 'lookup api.phwu-stage-m1.hsbx.s3.devshift.org on 172.30.0.10:53: no
+      such host'
+    observedGeneration: 1
+    reason: ExternalDNSHostNotReachable
+    status: "False"
+    type: ExternalDNSReachable
+  - lastTransitionTime: "2023-11-08T21:43:19Z"
+    message: Configuration passes validation
+    observedGeneration: 1
+    reason: AsExpected
+    status: "True"
+    type: ValidHostedControlPlaneConfiguration
+  - lastTransitionTime: "2023-11-08T21:43:21Z"
+    message: All is well
+    observedGeneration: 1
+    reason: AsExpected
+    status: "True"
+    type: ValidReleaseInfo
+  - lastTransitionTime: "2023-11-08T21:43:06Z"
+    message: Waiting for etcd to reach quorum
+    observedGeneration: 1
+    reason: WaitingForAvailable
+    status: "False"
+    type: Available
+  - lastTransitionTime: "2023-11-08T21:53:10Z"
+    message: 'failed to describe vpc endpoints: WebIdentityErr'
+    reason: AWSError
+    status: "False"
+    type: AWSEndpointAvailable
+  - lastTransitionTime: "2023-11-08T21:53:10Z"
+    message: All is well
+    reason: AWSSuccess
+    status: "True"
+    type: AWSEndpointServiceAvailable
+  - lastTransitionTime: "2023-11-08T21:43:06Z"
+    message: Configuration passes validation
+    observedGeneration: 1
+    reason: AsExpected
+    status: "True"
+    type: ValidConfiguration
+  - lastTransitionTime: "2023-11-08T21:43:06Z"
+    message: HostedCluster is supported by operator configuration
+    observedGeneration: 1
+    reason: AsExpected
+    status: "True"
+    type: SupportedHostedCluster
+  - lastTransitionTime: "2023-11-08T21:43:06Z"
+    message: Ignition server deployment not found
+    observedGeneration: 1
+    reason: NotFound
+    status: "False"
+    type: IgnitionEndpointAvailable
+  - lastTransitionTime: "2023-11-08T21:43:06Z"
+    message: Reconciliation active on resource
+    observedGeneration: 1
+    reason: AsExpected
+    status: "True"
+    type: ReconciliationActive
+  - lastTransitionTime: "2023-11-08T21:43:06Z"
+    message: Release image is valid
+    observedGeneration: 1
+    reason: AsExpected
+    status: "True"
+    type: ValidReleaseImage
+  - lastTransitionTime: "2023-11-08T21:43:08Z"
+    message: HostedCluster is at expected version
+    observedGeneration: 1
+    reason: AsExpected
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2023-11-08T21:43:10Z"
+    message: OIDC configuration is valid
+    observedGeneration: 1
+    reason: AsExpected
+    status: "True"
+    type: ValidOIDCConfiguration
+  - lastTransitionTime: "2023-11-08T22:17:44Z"
+    message: Reconciliation completed succesfully
+    observedGeneration: 2
+    reason: ReconciliatonSucceeded
+    status: "True"
+    type: ReconciliationSucceeded
+  - lastTransitionTime: "2023-11-08T21:43:19Z"
+    message: AWS KMS is not configured
+    observedGeneration: 1
+    reason: StatusUnknown
+    status: Unknown
+    type: ValidAWSKMSConfig
+  controlPlaneEndpoint:
+    host: api.phwu-stage-m1.hsbx.s3.devshift.org
+    port: 443
+  kubeadminPassword:
+    name: phwu-stage-m1-kubeadmin-password
+  kubeconfig:
+    name: phwu-stage-m1-admin-kubeconfig
+  oauthCallbackURLTemplate: https://oauth.phwu-stage-m1.hsbx.s3.devshift.org:443/oauth2callback/[identity-provider-name]
+  version:
+    availableUpdates: null
+    desired:
+      image: quay.io/openshift-release-dev/ocp-release@sha256:05ba8e63f8a76e568afe87f182334504a01d47342b6ad5b4c3ff83a2463018bd
+      version: ""
+    history:
+    - completionTime: null
+      image: quay.io/openshift-release-dev/ocp-release@sha256:05ba8e63f8a76e568afe87f182334504a01d47342b6ad5b4c3ff83a2463018bd
+      startedTime: "2023-11-08T21:43:06Z"
+      state: Partial
+      verified: false
+      version: ""
+    observedGeneration: 1
